@@ -18,7 +18,6 @@ public class AuthTestHeroku extends BaseTest{
         loginButton.click();
 
         WebElement success = driver.findElement(By.id("flash"));
-        //WebElement success = driver.findElement(By.xpath("//*[@id=\"content\"]/div/h2"));
         boolean displayed = success.isDisplayed();
 
         assertTrue(displayed, "Error");
@@ -33,7 +32,7 @@ public class AuthTestHeroku extends BaseTest{
         username.sendKeys("SuperSecret");
         WebElement loginButton = driver.findElement(By.className("fa-sign-in"));
         loginButton.click();
-        //WebElement unsuccessMessage = driver.findElement(By.id("flash"));
+
         WebElement unsuccessMessage = driver.findElement(By.xpath("//*[@id='flash']"));
         boolean displayed = unsuccessMessage.isDisplayed();
 

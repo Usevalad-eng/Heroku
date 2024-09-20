@@ -11,7 +11,6 @@ public class CheckBox extends BaseTest{
     public void isCheckBoxTwoSelected(){  //Should be - checkbox1 = unchecked, checkbox2 = checked.
         driver.get(URL);
 
-        //WebElement checkbox2 = driver.findElement(By.cssSelector("input[type = checkbox][checked]"));
         WebElement checkbox2 = driver.findElement(By.xpath("//*[@id='checkboxes']/input[2]"));
         boolean selected = checkbox2.isSelected();
         assertTrue(selected, "Error");
@@ -19,7 +18,6 @@ public class CheckBox extends BaseTest{
         WebElement checkbox1 = driver.findElement(By.xpath("//*[@id='checkboxes']/input[1]"));
         boolean selected2 = (!checkbox1.isSelected());
         assertTrue(selected2, "Error");
-
     }
 
     @Test
@@ -46,7 +44,6 @@ public class CheckBox extends BaseTest{
         if (!checkbox1.isSelected()){
             checkbox1.click();
         }
-
         WebElement checkbox2 = driver.findElement(By.xpath("//*[@id='checkboxes']/input[2]"));
         if (checkbox2.isSelected()){
             checkbox2.click();
