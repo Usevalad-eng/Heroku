@@ -13,7 +13,7 @@ public class AuthTestHeroku extends BaseTest{
         WebElement username = driver.findElement(By.id("username"));
         username.sendKeys("tomsmith");
         WebElement password = driver.findElement(By.id("password"));
-        username.sendKeys("SuperSecretPassword!");
+        password.sendKeys("SuperSecretPassword!");
         WebElement loginButton = driver.findElement(By.className("fa-sign-in"));
         loginButton.click();
 
