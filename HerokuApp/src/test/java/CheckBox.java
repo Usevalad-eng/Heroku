@@ -41,13 +41,13 @@ public class CheckBox extends BaseTest{
         driver.get(URL);
 
         WebElement checkbox1 = driver.findElement(By.xpath("//*[@id='checkboxes']/input[1]"));
-        if (!checkbox1.isSelected()){
+        //if (!checkbox1.isSelected()){
             checkbox1.click();
-        }
+        //}
         WebElement checkbox2 = driver.findElement(By.xpath("//*[@id='checkboxes']/input[2]"));
-        if (checkbox2.isSelected()){
+        //if (checkbox2.isSelected()){
             checkbox2.click();
-        }
+        //}
 
         boolean selected1 = checkbox1.isSelected();
         assertTrue(selected1, "Error");
