@@ -13,12 +13,8 @@ import java.time.Duration;
 
 public class FirstTest extends BaseTest{
 
-    //WebDriver driver;
-
-
     @Test
     public void firstTest() {
-        //driver = new ChromeDriver();
         driver.get("https://www.onliner.by/");
         driver.quit();
     }
