@@ -15,7 +15,7 @@ public class FirstTest extends BaseTest{
 
     @Test
     public void firstTest() {
-        driver.get("https://www.onliner.by/");
+        driver.get("https://the-internet.herokuapp.com/");
         driver.quit();
     }
 
