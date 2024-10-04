@@ -1,3 +1,4 @@
+import org.openqa.selenium.Alert;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
 import org.openqa.selenium.chrome.ChromeOptions;
@@ -8,6 +9,7 @@ import java.time.Duration;
 
 public class BaseTest {
     WebDriver driver;
+    Alert alert;
 
     @BeforeMethod
     public void setUp() {
