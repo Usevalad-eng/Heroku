@@ -11,7 +11,6 @@ import java.time.Duration;
 public class BaseTest {
     WebDriver driver;
     Alert alert;
-
     WebDriverWait wait;
 
     @BeforeMethod
