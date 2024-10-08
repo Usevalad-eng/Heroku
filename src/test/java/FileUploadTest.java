@@ -5,7 +5,7 @@ import org.testng.annotations.Test;
 
 import java.io.File;
 
-public class UploadTest extends BaseTest{
+public class FileUploadTest extends BaseTest{
     @Test
     public void uploadTest() {
         driver.get("https://the-internet.herokuapp.com/upload");
