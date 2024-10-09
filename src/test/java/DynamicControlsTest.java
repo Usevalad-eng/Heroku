@@ -15,15 +15,13 @@ public class DynamicControlsTest extends BaseTest {
         wait.until(ExpectedConditions.visibilityOfAllElementsLocatedBy(By.xpath("//button[@autocomplete = 'off']")));
         WebElement message = driver.findElement(By.id("message"));
         Assert.assertTrue(message.isDisplayed(), "There is no message 'it's gone' - it must be seen");
-
-        wait.until(ExpectedConditions.invisibilityOfElementLocated(By.id("checkbox")));
+        Assert.assertTrue(wait.until(ExpectedConditions.invisibilityOfElementLocated(By.id("checkbox"))), "Element is not removed!");
         try {
             WebElement element = driver.findElement(By.id("checkbox"));
             element.click();
         } catch (NoSuchElementException | StaleElementReferenceException e) {
             System.out.println("Element has been removed");
         }
-
         WebElement input = driver.findElement(By.xpath("//input[@type = 'text']"));
         Assert.assertFalse(input.isEnabled(), "Input must be disabled");
         driver.findElement(By.xpath("//button[@onclick= 'swapInput()']")).click();
